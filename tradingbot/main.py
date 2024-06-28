@@ -128,10 +128,10 @@ def strategy(df, symbol, trade_amount, price):
     if 'USDT' in saldo and saldo ['USDT']['free'] > 0:
         if last_signal == 1:
             print("Executando ordem de compra!")
-            place_buy_order(symbol, trade_amount, price)
+            place_buy_order(symbol, trade_amount, price)#compra
         elif last_signal == -1:
             print("Executando ordem de venda")
-            sell_order(symbol, trade_amount)
+            sell_order(symbol, trade_amount)#venda
         else:
             print("Nenhum sinal de ordem emitido/detectado")
     else:
